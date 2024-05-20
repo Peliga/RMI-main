@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Enrolled>
-   <student_id>
-      <id>400</id>
+   <enrolled>
+      <student_id>400</student_id>
       <course>201</course>
-   </student_id>
-   <student_id>
-      <id>403</id>
+   </enrolled>
+   <enrolled>
+      <student_id>403</student_id>
       <course>201</course>
-   </student_id>
-   <student_id>
-      <id>403</id>
+   </enrolled>
+   <enrolled>
+      <student_id>403</student_id>
       <course>201</course>
-   </student_id>
-   <student_id>
-      <id>403</id>
+   </enrolled>
+   <enrolled>
+      <student_id>403</student_id>
       <course>203</course>
-   </student_id>
-   <student_id>
-      <id>500</id>
+   </enrolled>
+   <enrolled>
+      <student_id>500</student_id>
       <course>203</course>
-   </student_id>
+   </enrolled>
+   <enrolled>
+      <student_id>500</student_id>
+      <course>201</course>
+   </enrolled>
 </Enrolled>
