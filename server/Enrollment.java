@@ -49,7 +49,7 @@ public class Enrollment implements EnrollmentInterface, EnrollmentInitialInterfa
         try {
             truncateTable("students"); 
 
-            File xmlFile = new File("Xml files/Student.xml");
+            File xmlFile = new File("XML-Files/Student.xml");
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document document = dBuilder.parse(xmlFile);
@@ -102,7 +102,7 @@ public class Enrollment implements EnrollmentInterface, EnrollmentInitialInterfa
 
     // Insert Student Record to the XML
     private void insertStudentXML(int std_id,String fname, String stdPorgram){
-        File studentXML = new File("Xml files/Student.xml");
+        File studentXML = new File("XML-Files/Student.xml");
 
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
         
@@ -164,7 +164,7 @@ public class Enrollment implements EnrollmentInterface, EnrollmentInitialInterfa
         try {
             truncateTable("courses");
 
-            File xmlFile = new File("Xml files/Course.xml");
+            File xmlFile = new File("XML-Files/Course.xml");
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document document = dBuilder.parse(xmlFile);
@@ -291,7 +291,7 @@ public class Enrollment implements EnrollmentInterface, EnrollmentInitialInterfa
 
     // Insert Enrolled Student  to the Enrolled XML FILE
     private void  insertEnrollStudentXML(int std_id, int course_id) throws SAXException, IOException, TransformerException{
-        File enrollXML = new File("Xml files/Enrolled.xml");
+        File enrollXML = new File("XML-Files/Enrolled.xml");
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
         try {
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
