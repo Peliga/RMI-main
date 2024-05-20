@@ -49,7 +49,7 @@ public class Enrollment implements EnrollmentInterface, EnrollmentInitialInterfa
         try {
             truncateTable("students"); 
 
-            File xmlFile = new File("Student.xml");
+            File xmlFile = new File("Xml files/Student.xml");
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document document = dBuilder.parse(xmlFile);
@@ -99,9 +99,10 @@ public class Enrollment implements EnrollmentInterface, EnrollmentInitialInterfa
                 System.out.println("Unknown client added new student");
                 return 1;
     }
+
     // Insert Student Record to the XML
     private void insertStudentXML(int std_id,String fname, String stdPorgram){
-        File studentXML = new File("Student.xml");
+        File studentXML = new File("Xml files/Student.xml");
 
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
         
@@ -144,7 +145,7 @@ public class Enrollment implements EnrollmentInterface, EnrollmentInitialInterfa
             Transformer transformer = transformerFactory.newTransformer();
 
             transformer.setOutputProperty(OutputKeys.INDENT,"yes");
-            transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount","2");
+            transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount","2"); //xalan
 
             DOMSource domSource = new DOMSource(document);
 
@@ -158,11 +159,12 @@ public class Enrollment implements EnrollmentInterface, EnrollmentInitialInterfa
     }
    
     // Initialize Course 
+    int cnt =0 ;
     public void initializeCourses() {
         try {
             truncateTable("courses");
 
-            File xmlFile = new File("Course.xml");
+            File xmlFile = new File("Xml files/Course.xml");
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document document = dBuilder.parse(xmlFile);
@@ -289,7 +291,7 @@ public class Enrollment implements EnrollmentInterface, EnrollmentInitialInterfa
 
     // Insert Enrolled Student  to the Enrolled XML FILE
     private void  insertEnrollStudentXML(int std_id, int course_id) throws SAXException, IOException, TransformerException{
-        File enrollXML = new File("Enrolled.xml");
+        File enrollXML = new File("Xml files/Enrolled.xml");
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
         try {
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -383,6 +385,7 @@ public class Enrollment implements EnrollmentInterface, EnrollmentInitialInterfa
                 boolean studentFound = false;
                 for (int j = 0; j < students.size(); j++) {
                     if (std_id == students.get(j).getId()) {
+
                         students.get(j).setCourse(course_id);
                         insertEnrolledStudent(std_id, course_id);
                         studentFound = true;

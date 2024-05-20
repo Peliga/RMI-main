@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Enrolled>
    <enrolled>
-      <student_id>400</student_id>
-      <course>201</course>
-   </enrolled>
-   <enrolled>
       <student_id>403</student_id>
       <course>201</course>
    </enrolled>
@@ -15,5 +11,9 @@
    <enrolled>
       <student_id>402</student_id>
       <course>203</course>
+   </enrolled>
+   <enrolled>
+      <student_id>400</student_id>
+      <course>201</course>
    </enrolled>
 </Enrolled>
