@@ -9,19 +9,11 @@
       <course>201</course>
    </enrolled>
    <enrolled>
-      <student_id>403</student_id>
+      <student_id>401</student_id>
       <course>201</course>
    </enrolled>
    <enrolled>
-      <student_id>403</student_id>
+      <student_id>402</student_id>
       <course>203</course>
-   </enrolled>
-   <enrolled>
-      <student_id>500</student_id>
-      <course>203</course>
-   </enrolled>
-   <enrolled>
-      <student_id>500</student_id>
-      <course>201</course>
    </enrolled>
 </Enrolled>

@@ -45,4 +45,9 @@
     <name>Mario Pracullos</name>
     <program>BSAF</program>
   </student>
+  <student>
+    <id>404</id>
+    <name>cj</name>
+    <program>bsit</program>
+  </student>
 </Student>

@@ -63,6 +63,7 @@ public class Enrollment implements EnrollmentInterface, EnrollmentInitialInterfa
                 int id = Integer.parseInt(studentElement.getElementsByTagName("id").item(0).getTextContent());
                 String name = studentElement.getElementsByTagName("name").item(0).getTextContent();
                 String program = studentElement.getElementsByTagName("program").item(0).getTextContent();
+                
                 students.add(new Student(id, name, program));
 
                 // Insert student data into the database
